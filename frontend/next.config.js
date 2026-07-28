@@ -1,11 +1,9 @@
-/** @type {import('next').NextType} */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  reactStrictMode: true,
   images: {
-    unoptimized: true,
+    remotePatterns: [{ protocol: "https", hostname: "**" }],
   },
-  // If hosting under a subpath like username.github.io/market-pulse:
-  basePath: '/market-pulse', 
 };
 
 module.exports = nextConfig;
